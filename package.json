@@ -5,10 +5,25 @@
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.1.1",
+    "body-parser": "^1.19.0",
+    "ethers": "^4.0.37",
+    "express": "^4.17.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "lite-server": "^2.5.4",
+    "nodemon": "^1.19.2",
+    "truffle": "^5.0.35",
+    "truffle-contract": "^4.0.31"
   },
   "scripts": {
     "start": "react-scripts start",
+    "dev": "node server.js && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
