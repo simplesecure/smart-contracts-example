@@ -12,7 +12,7 @@ contract TodoList {
   mapping(uint => Task) public tasks;
 
   constructor() public {
-    createTask("Figure out ethereum");
+    createTask("Start using SimpleID");
   }
 
   event TaskCreated(

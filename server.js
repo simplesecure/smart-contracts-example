@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
 const bodyParser = require("body-parser");
+const cors = require('cors')
 app.use(bodyParser.json());
+app.use(cors());
 const port = 5000;
 
 const ethers = require('ethers');
@@ -9,8 +11,7 @@ let provider = ethers.getDefaultProvider('ropsten');
 let url = "http://127.0.0.1:7545";
 let customHttpProvider = new ethers.providers.JsonRpcProvider(url);
 let address = "0xe9CF9486ECf63bdA487B64698085A51392f42081";
-let privateKey = "8192c7840f4ad34777acb0e89f7b4e1a134986f9ec09e57e6f3414dd813843f6";
-
+let privateKey = "8192c7840f4ad34777acb0e89f7b4e1a134986f9ec09e57e6f3414dd813843f6"; 
 
 app.post('/ganache/deployContract', async (req, res) => {
   const { abi, bytecode } = req.body;
